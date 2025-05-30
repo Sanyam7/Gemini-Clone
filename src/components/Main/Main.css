@@ -4,6 +4,19 @@
     padding-bottom: 15vh;
     position: relative;
 }
+
+.right{
+    display: flex;
+}
+
+.icon{
+    margin-right: 15px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
 .main .nav {
     display: flex;
     align-items: center;

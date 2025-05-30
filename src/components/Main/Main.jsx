@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 const Main = () => {
 
@@ -12,7 +14,9 @@ const Main = () => {
     loading,
     resultData,
     setInput,
-    input
+    input,
+    toggleTheme,
+    theme
   } = useContext(Context);
 
 
@@ -20,7 +24,13 @@ const Main = () => {
     <div className='main'>
       <div className="nav">
         <p>Gemini</p>
+          
+      <div className='right'>
+        <div onClick={toggleTheme}>
+            {theme === 'light' ? <MdDarkMode className='icon' /> : <CiLight className='icon' />}
+          </div>
         <img src={assets.user_icon} alt="" />
+        </div>
       </div>
       <div className="main-container">
         {showResult

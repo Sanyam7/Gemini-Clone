@@ -61,6 +61,22 @@ margin-bottom: 20px;
     flex-direction: column;
 }
 
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark-theme {
+  --bg-color: #222020;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .sidebar .bottom-item {
     padding-right: 10px;
     cursor: pointer;
